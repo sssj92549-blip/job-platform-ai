@@ -1,4 +1,4 @@
-"""运行前先配置local.yml，默认仅监听本机8000端口。"""
+"""运行前先配置local.yml，默认仅监听本机7999端口。"""
 
 import uvicorn
 from app.config import load_settings

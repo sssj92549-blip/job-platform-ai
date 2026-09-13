@@ -1,7 +1,7 @@
 # 可提交的公共配置；模型名称只在这里维护。
 server:
   host: 127.0.0.1
-  port: 8000
+  port: 7999
   internal_token: ""
 storage:
   uploads_root: ../uploads

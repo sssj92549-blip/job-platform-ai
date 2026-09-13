@@ -16,7 +16,7 @@ Copy-Item local.example.yml local.yml
 .venv\Scripts\python.exe run.py
 ```
 
-默认监听 `127.0.0.1:8000`，首次启动下载OCR和Embedding模型，后续复用缓存。启动预热可能需要几分钟，失败后健康检查明确返回503，不伪装成可用。只运行一个worker，避免重复加载模型或争用本地Chroma。
+默认监听 `127.0.0.1:7999`，首次启动下载OCR和Embedding模型，后续复用缓存。启动预热可能需要几分钟，失败后健康检查明确返回503，不伪装成可用。只运行一个worker，避免重复加载模型或争用本地Chroma。
 
 | 文件 | 用途 |
 |---|---|
@@ -61,7 +61,7 @@ scripts/smoke.py  真实OCR/向量验证，--live额外调用DeepSeek
 
 ## Java对接
 
-Java端 `app.ai.base-url` 使用 `http://127.0.0.1:8000`，`app.ai.internal-token` 与Python的 `server.internal_token` 保持一致。当前Java基础框架的RestTemplate会自动带上该内部认证头；后续业务Service仍需实现HTTP调用、事务和异步任务持久化。
+Java端 `app.ai.base-url` 使用 `http://127.0.0.1:7999`，`app.ai.internal-token` 与Python的 `server.internal_token` 保持一致。当前Java基础框架的RestTemplate会自动带上该内部认证头；后续业务Service仍需实现HTTP调用、事务和异步任务持久化。
 
 两端uploads必须指向同一目录，本机为 `E:/java/code/jobPlatform/uploads`。请求示例：
 
