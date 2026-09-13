@@ -1,0 +1,7 @@
+# 复制为local.yml并填写；local.yml被Git忽略。
+server:
+  internal_token: replace-with-a-long-random-token
+storage:
+  uploads_root: E:/java/code/jobPlatform/uploads
+deepseek:
+  api_key: replace-with-your-deepseek-api-key

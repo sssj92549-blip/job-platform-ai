@@ -1,0 +1,20 @@
+[project]
+name = "job-platform-ai"
+version = "0.1.0"
+description = "招聘平台独立 FastAPI AI 服务"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "httpx>=0.27,<1",
+  "pydantic>=2.9,<3", "PyYAML>=6,<7", "PyMuPDF>=1.24,<2",
+  "numpy>=1.26,<3", "chromadb>=1.0,<2", "fastembed>=0.7,<1",
+  "paddleocr>=3.0,<4", "paddlepaddle>=3.0,<4"
+]
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

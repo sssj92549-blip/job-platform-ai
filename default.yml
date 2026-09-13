@@ -1,0 +1,25 @@
+# 可提交的公共配置；模型名称只在这里维护。
+server:
+  host: 127.0.0.1
+  port: 8000
+  internal_token: ""
+storage:
+  uploads_root: ../uploads
+  chroma_path: data/chroma
+  model_cache: data/models
+deepseek:
+  base_url: https://api.deepseek.com
+  model: deepseek-flash
+  api_key: ""
+  timeout_seconds: 90
+  max_tokens: 8192
+embedding:
+  model: BAAI/bge-small-zh-v1.5
+  collection: resumes_bge_small_zh_v1_5
+  chunk_chars: 200
+ocr:
+  language: ch
+  detection_model: PP-OCRv5_mobile_det
+  recognition_model: PP-OCRv5_mobile_rec
+  dpi: 150
+  text_threshold: 20

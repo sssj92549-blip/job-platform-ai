@@ -1,0 +1,14 @@
+.venv/
+local.yml
+*.log
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+data/
+chroma/
+logs/
+.coverage
+*.egg-info/
+dist/
